@@ -1,23 +1,60 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<!--
 <mat-grid-list id="list" cols="4" rowHeight="200px">
   <mat-grid-tile
       *ngFor="let element of elements"
       [colspan]= "4"
       [rowspan]="1">
 
-    <div class="block">
-      <img [src]="element.pictureSrc" alt="Path not found">
-    </div>
 
-    <div class="infos">
-      <p id="city">City: {{element.city}}</p>
-      <p id="zipCode">Zipcode: {{element.zipCode}}</p>
-      <p id="street">Street: {{element.street}}</p>
-      <p id="houseNumber">Housenumber: {{element.houseNumber}}</p>
-      <p id="pricePerHour">Price per Hour: {{element.pricePerHour}}</p>
-      <p id="description">Description: {{element.description}}</p>
-      <p id="isPublic">Public: {{element.isPublic}}</p>
-      <p id="isWallBox">Wallbox: {{element.isWallBox}}</p>
-      <p id="bookableTimings">Bookable: {{element.bookableTimings}}</p>
-    </div>
+      <div class="image">
+        <img class="picOfParkingPlace" [src]="element.pictureSrc" alt="Path not found">
+      </div>
+
+      <div class="infos">
+        <p id="city">City: {{element.city}}</p>
+        <p id="zipCode">Zipcode: {{element.zipCode}}</p>
+        <p id="street">Street: {{element.street}}</p>
+        <p id="houseNumber">Housenumber: {{element.houseNumber}}</p>
+        <p id="pricePerHour">Price per Hour: {{element.pricePerHour}}</p>
+        <p id="description">Description: {{element.description}}</p>
+        <p id="isPublic">Public: {{element.isPublic}}</p>
+        <p id="isWallBox">Wallbox: {{element.isWallBox}}</p>
+        <p id="bookableTimings">Bookable: {{element.bookableTimings}}</p>
+      </div>
+
   </mat-grid-tile>
 </mat-grid-list>
+-->
+<div class="megaWrap">
+  <ul>
+    <li *ngFor="let element of elements">
+      <div class='card'>
+        <div class='card_left'>
+          <img [src]="element.pictureSrc">
+        </div>
+        <div class='card_right'>
+          <h1>{{element.city}}</h1>
+          <div class='card_right__details'>
+            <ul>
+              <li>Zip: {{element.zipCode}}</li>
+              <li>Street: {{element.street}}</li>
+              <li>No: {{element.houseNumber}}</li>
+            </ul>
+            <ul>
+              <li> Pricing: {{element.pricePerHour}}</li>
+              <li *ngIf="element.isPublic">Public Parking Place</li>
+              <li *ngIf="!element.isPublic">Private Parking Place</li>
+              <li *ngIf="element.isWallBox">Walbox available!</li>
+              <li *ngIf="!element.isWallBox">No Walbox available!</li>
+            </ul>
+            <p class="card_right__details___description">Description: <br> {{element.description}}</p>
+            </div>
+
+        </div>
+      </div>
+  </li>
+</ul>
+</div>

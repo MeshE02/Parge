@@ -12,11 +12,11 @@ export interface Parkingplace {
   isPublic: boolean;
   isWallBox: boolean;
 
-  bookableTimings: {
+  bookableTimings?: {
     startDateTime: any;
     endDateTime: any;
   }[];
-  bookedTimings: {
+  bookedTimings?: {
     startDateTime: any;
     endDateTime: any;
   }[];
