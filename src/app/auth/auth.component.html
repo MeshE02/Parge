@@ -1,24 +1,57 @@
-<div class="full-height-grow-scrollable">
-  <h1 id="login-text">
-      <span class="accent-text"> Suche DEINEN Parkplatz und melde dich an! </span>
-  </h1>
-  <section id="login-section">
-    <form id="login-form">
-      <div class="input-group">
-        <label for="email"> E-Mail:</label>
-        <input id="email" type="email" placeholder="E-Mail" [(ngModel)]="email" name="email"/>
-      </div>
-      <div class="input-group">
-        <label for="password"> Passwort:</label>
-        <input id="password" type="password" placeholder="Passwort" [(ngModel)]="password" name="password"/>
-      </div>
 
-      <button type="submit" class="btn-type-1" id="btn-auth" (click)="signIn()">Anmelden</button>
+<!-- <div class="login_card">
+  <div class="full-height-grow-scrollable">
+    <h2 id="login-text">
+        <span style = "font-family:inherit;" class="accent-text"> Suche DEINEN Parkplatz und melde dich an! </span>
+    </h2>
+    <section id="login-section">
+      <form id="login-form">
+        <div class="input-group">
+          <label id ="email_txt" for="email"> E-Mail:</label>
+          <input id="email" type="email" placeholder="E-Mail" [(ngModel)]="email" name="email"/>
+        </div>
+        <div class="input-group">
+          <label id="password_txt" for="password"> Passwort:</label>
+          <input id="password" type="password" placeholder="Passwort" [(ngModel)]="password" name="password"/>
+        </div>
 
-      <div id="user-login-fail" *ngIf="signInFailed">
-        <p>Anmeldung fehlgeschlagen</p>
-      </div>
+        <button mat-raised-button color="primary" type="submit" class="btn-type-1" id="btn-auth" (click)="signIn()">Anmelden</button>
+
+        <div id="user-login-fail" *ngIf="signInFailed">
+          <p>Anmeldung fehlgeschlagen</p>
+        </div>
+      </form>
+
+    </section>
+  </div>
+</div> -->
+
+
+
+<div id="card">
+  <div id="card-content">
+    <div id="card-title">
+      <h2>LOGIN</h2>
+      <div class="underline-title"></div>
+    </div>
+    <form method="post" class="form">
+      <label for="user-email" style="padding-top:13px">
+          &nbsp;Email
+        </label>
+        <input id="user-email" class="form-content" autocomplete="on" type="email" [(ngModel)]="email" name="email"/>
+      <div class="form-border"></div>
+      <label for="user-password" style="padding-top:22px">&nbsp;Password
+        </label>
+      <input id="user-password" class="form-content" type="password" [(ngModel)]="password" name="password"/>
+      <!-- <input id="user-password" class="form-content" type="password" name="password" required /> -->
+      <div class="form-border"></div>
+      <a href="#">
+        <legend id="forgot-pass">Password vergessen ?</legend>
+      </a>
+      <button mat-raised-button color="primary" type="submit" class="btn-type-1" id="submit-btn" (click)="signIn()">Anmelden</button>
+      <a href="#" id="signup">Noch kein Account ?</a>
     </form>
-
-  </section>
+  </div>
 </div>
+
+
