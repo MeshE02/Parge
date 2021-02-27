@@ -6,6 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+import 'here-js-api/scripts/mapsjs-core';
+import 'here-js-api/scripts/mapsjs-service';
+import 'here-js-api/scripts/mapsjs-ui';
+import 'here-js-api/scripts/mapsjs-mapevents';
+import 'here-js-api/scripts/mapsjs-clustering';
 
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ParameterComponentComponent } from './search-result/parameter-component/parameter-component.component';
@@ -24,6 +31,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { GmapsComponent } from './search-result/gmaps/gmaps.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +44,7 @@ import { RegisterComponent } from './register/register.component';
     ParameterComponentComponent,
     ResultComponentComponent,
     RegisterComponent,
+    GmapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +60,7 @@ import { RegisterComponent } from './register/register.component';
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
+    GoogleMapsModule,
     BrowserAnimationsModule,
   ],
   providers: [],
