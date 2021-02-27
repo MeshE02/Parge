@@ -28,12 +28,19 @@ import { MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { MatNativeDateModule } from '@angular/material/core';
 import { RegisterPPComponent } from './register-pp/register-pp.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { GmapsComponent } from './search-result/gmaps/gmaps.component';
+
 
 @NgModule({
   declarations: [
@@ -60,6 +67,10 @@ import { GmapsComponent } from './search-result/gmaps/gmaps.component';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
