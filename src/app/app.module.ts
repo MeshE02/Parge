@@ -31,18 +31,12 @@ import { environment } from '../environments/environment';
     BrowserModule,
     FormsModule,
     MatGridListModule,
-    AppRoutingModule
-
+    AppRoutingModule,
     AuthComponent,
     HeaderComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
+    FooterComponent,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'Shark'),
     AngularFirestoreModule.enablePersistence(),
-    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
