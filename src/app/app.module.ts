@@ -35,7 +35,7 @@ import { RegisterComponent } from './register/register.component';
     SearchResultComponent,
     ParameterComponentComponent,
     ResultComponentComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
