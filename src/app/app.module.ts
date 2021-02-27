@@ -31,6 +31,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { RegisterPPComponent } from './register-pp/register-pp.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { GmapsComponent } from './search-result/gmaps/gmaps.component';
 
 @NgModule({
@@ -44,6 +46,7 @@ import { GmapsComponent } from './search-result/gmaps/gmaps.component';
     ParameterComponentComponent,
     ResultComponentComponent,
     RegisterComponent,
+    RegisterPPComponent,
     GmapsComponent,
   ],
   imports: [
@@ -62,6 +65,7 @@ import { GmapsComponent } from './search-result/gmaps/gmaps.component';
     MatIconModule,
     GoogleMapsModule,
     BrowserAnimationsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

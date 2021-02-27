@@ -24,4 +24,16 @@ export class ParkingplaceService {
       map(snaps => convertSnaps<Parkingplace>(snaps))
     );
   }
+
+  createParkingplace(entry: Parkingplace) {
+    return this.db.collection('parkingplaces').add(entry)
+      .then(res => {
+        console.log('parkingplaces successfully submitted');
+        return true;
+      }, err => {
+        console.log('parkingplaces failed to submit');
+        console.log(err);
+        return false;
+      });
+  }
 }

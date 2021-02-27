@@ -1,18 +1,28 @@
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <img id="logo" src="https://img.icons8.com/dusk/64/000000/city.png"/>
+      <img id="logo" (click)="onMainMenu()" src="https://img.icons8.com/dusk/64/000000/city.png"/>
       <span id="company_name">Parche</span>
       <span class="example-spacer"></span>
 
       <section>
-        <div class="login_btn">
-          <button mat-button>Login</button>
+        <div class="login_btn" *ngIf="!isAuthenticated">
+          <button mat-button (click)="onSignIn()">Login</button>
         </div>
       </section>
       <section>
-        <div class="register_btn">
-          <button mat-button>Register</button>
+        <div class="register_btn" *ngIf="!isAuthenticated">
+          <button mat-button (click)="onRegister()">Register</button>
+        </div>
+      </section>
+      <section>
+        <div class="createpp_btn" *ngIf="isAuthenticated">
+          <button mat-button (click)="onCreatePP()">Parkplatz registrieren</button>
+        </div>
+      </section>
+      <section>
+        <div class="signout_btn" *ngIf="isAuthenticated">
+          <button mat-button (click)="onSignOut()">Abmelden</button>
         </div>
       </section>
 
