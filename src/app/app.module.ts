@@ -20,7 +20,9 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     LandingComponent,
-
+    AuthComponent,
+    FooterComponent,
+    HeaderComponent,
     SearchResultComponent,
     ParameterComponentComponent,
     ResultComponentComponent
@@ -30,9 +32,6 @@ import { environment } from '../environments/environment';
     FormsModule,
     MatGridListModule,
     AppRoutingModule,
-    AuthComponent,
-    HeaderComponent,
-    FooterComponent,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'Shark'),
     AngularFirestoreModule.enablePersistence(),
   ],
