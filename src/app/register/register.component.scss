@@ -1,61 +1,3 @@
-#login-text {
-  color: rgb(53, 30, 30);
-  text-align: center;
-}
-
-.full-height-grow-scrollable {
-  margin-left: 10px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.input-group {
-  margin-top: 10px;
-}
-
-.btn-type-1 {
-  margin-top: 10px;
-  width: 150px;
-  height: 30px;
-  margin-left: 70px;
-  text-align: center;
-}
-
-#password {
-  margin-left: 10px;
-}
-
-
-#email_txt {
-  margin-left: 8px;
-  font-weight: bold;
-}
-
-#password_txt {
-  font-weight: bold;
-}
-
-#email {
-  margin-left: 22px;
-}
-
-.login_card {
-  background-color: gray;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  padding: 2px 16px;
-}
-
-.login_card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-
-
-
-
-
 a {
   text-decoration: none;
 }
@@ -78,7 +20,7 @@ label {
   background: #fbfbfb;
   border-radius: 8px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-  height: 480px;
+  height: 510px;
   margin: 6rem auto 8.1rem auto;
   width: 329px;
 }
@@ -136,7 +78,8 @@ label {
   background: rgb(228,28,88);
   height: 2px;
   margin: -1.1rem auto 0 auto;
-  width: 89px;
+  width: 109px;
 }
+
 
 

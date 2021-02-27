@@ -1,0 +1,47 @@
+.overview {
+  // background-image:url('../../assets/images/try1.jpg');
+  opacity: 75%;
+  height: 800px;
+  text-align: center;
+  background-size: cover;
+
+}
+
+#image {
+  top: 10;
+  left: 0;
+  position: absolute;
+  height: 90%;
+  width: 100%;
+}
+
+.overview .container {
+  position: relative;
+  top:100px;
+}
+
+.overview h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.overview p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}

@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { convertSnaps } from './common';
 import { map } from 'rxjs/operators';
+import { Parkingplace } from '../models/Parkingplace.model';
 
 
 @Injectable({
@@ -14,11 +15,13 @@ export class ParkingplaceService {
     private db: AngularFirestore
   ) { }
 
-  loadParkingplaces(): Observable<Parkingplace[]> {
-    return this.db.collection('tables', ref => ref)
-      .snapshotChanges()
-      .pipe(
-        map(snaps => convertSnaps<Parkingplace>(snaps))
-      );
+  getParkingplaces() {
+    // return this.db.collection('parkingplaces').snapshotChanges().subscribe(resp => {
+    //   console.log('oha_2');
+    //   console.log(resp[0].payload.doc.data());
+    // });
+    return this.db.collection('parkingplaces').snapshotChanges().pipe(
+      map(snaps => convertSnaps<Parkingplace>(snaps))
+    );
   }
 }
