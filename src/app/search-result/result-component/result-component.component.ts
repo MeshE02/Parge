@@ -1,6 +1,8 @@
+import { ParkingplaceService } from './../../services/parkingplace.service';
 import { Parkingplace } from '../../models/Parkingplace.model';
 import { Component, Input, OnInit } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @Component({
   selector: 'app-result-component',
@@ -10,11 +12,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 export class ResultComponentComponent implements OnInit {
   tiles: { text: string; cols: number; rows: number; color: string; }[];
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   @Input() elements: Array<Parkingplace>;
 
   ngOnInit(): void {
-
   }
 }

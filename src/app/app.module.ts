@@ -5,6 +5,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ParameterComponentComponent } from './search-result/parameter-component/parameter-component.component';
@@ -43,6 +44,8 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'Shark'),
     AngularFirestoreModule.enablePersistence(),
+    HttpClientModule
+=======
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
