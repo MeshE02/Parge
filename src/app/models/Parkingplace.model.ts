@@ -5,10 +5,10 @@ export interface Parkingplace {
   street: string;
   houseNumber: string;
   creationDateTime: any;
-  pricePerHour: string;
+  pricePerHour: number;
   description: string;
-  pictureSrc: string;
-  ownerUserId?: number;
+  pictureSrc?: string;
+  ownerUserId?: string;
   isPublic: boolean;
   isWallBox: boolean;
 

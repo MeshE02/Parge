@@ -1,0 +1,89 @@
+<div id="card">
+  <div id="card-content">
+    <div id="card-title">
+      <h2>Registriere deinen Parkplatz!</h2>
+      <div class="underline-title"></div>
+    </div>
+    <form method="post" class="form">
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Stadt</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="city"
+        [(ngModel)]="city"
+      />
+      <div class="form-border"></div>
+
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Postleitzahl</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="zipCode"
+        [(ngModel)]="zipCode"
+      />
+      <div class="form-border"></div>
+
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Straße</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="street"
+        [(ngModel)]="street"
+      />
+      <div class="form-border"></div>
+
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Hausnummer</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="houseNumber"
+        [(ngModel)]="houseNumber"
+      />
+      <div class="form-border"></div>
+
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Preis pro Stunde</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="pricePerHour"
+        [(ngModel)]="pricePerHour"
+      />
+      <div class="form-border"></div>
+
+      <!-- CheckBox -->
+      <mat-checkbox class="mat-chbox" [(ngModel)]="isWallbox" name="wallbox">E-Ladestation vorhanden</mat-checkbox>
+
+      <!-- Input -->
+      <label for="user-email" style="padding-top: 13px"> &nbsp;Beschreibung</label>
+      <input
+        id="user-email"
+        class="form-content"
+        autocomplete="on"
+        name="description"
+        [(ngModel)]="description"
+      />
+      <div class="form-border"></div>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="btn-type-1"
+        id="submit-btn"
+        (click)="onRegisterPP()"
+      >
+        Registrieren
+      </button>
+    </form>
+  </div>
+</div>

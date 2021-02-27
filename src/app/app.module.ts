@@ -24,6 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { RegisterPPComponent } from './register-pp/register-pp.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { RegisterComponent } from './register/register.component';
     ParameterComponentComponent,
     ResultComponentComponent,
     RegisterComponent,
+    RegisterPPComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { RegisterComponent } from './register/register.component';
     MatDividerModule,
     MatIconModule,
     BrowserAnimationsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 export interface User {
   documentId?: string;
 
-  email: string;
+  userEmail: string;
   userName: string;
-  userSurname: string;
 }
