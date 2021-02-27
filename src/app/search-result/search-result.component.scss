@@ -1,0 +1,14 @@
+.container {
+  width: 95%;
+  margin: 15px;
+  display: inline-block;
+
+  app-result-component {
+    float: left;
+  }
+
+  app-gmaps {
+    margin-left: 25px;
+  }
+
+}
