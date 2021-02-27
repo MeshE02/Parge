@@ -1,0 +1,24 @@
+<div class="full-height-grow-scrollable">
+  <h1 id="login-text">
+      <span class="accent-text"> Suche DEINEN Parkplatz und melde dich an! </span>
+  </h1>
+  <section id="login-section">
+    <form id="login-form">
+      <div class="input-group">
+        <label for="email"> E-Mail:</label>
+        <input id="email" type="email" placeholder="E-Mail" [(ngModel)]="email" name="email"/>
+      </div>
+      <div class="input-group">
+        <label for="password"> Passwort:</label>
+        <input id="password" type="password" placeholder="Passwort" [(ngModel)]="password" name="password"/>
+      </div>
+
+      <button type="submit" class="btn-type-1" id="btn-auth" (click)="signIn()">Anmelden</button>
+
+      <div id="user-login-fail" *ngIf="signInFailed">
+        <p>Anmeldung fehlgeschlagen</p>
+      </div>
+    </form>
+
+  </section>
+</div>
