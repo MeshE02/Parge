@@ -44,8 +44,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'Shark'),
     AngularFirestoreModule.enablePersistence(),
-    HttpClientModule
-=======
+    HttpClientModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
