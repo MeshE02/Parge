@@ -1,8 +1,23 @@
-<mat-grid-list cols="4" rowHeight="200px">
+<mat-grid-list id="list" cols="4" rowHeight="200px">
   <mat-grid-tile
       *ngFor="let element of elements"
       [colspan]= "4"
       [rowspan]="1">
-    {{element.id}}
+
+    <div class="block">
+      <img [src]="element.pictureSrc" alt="Path not found">
+    </div>
+
+    <div class="infos">
+      <p id="city">City: {{element.city}}</p>
+      <p id="zipCode">Zipcode: {{element.zipCode}}</p>
+      <p id="street">Street: {{element.street}}</p>
+      <p id="houseNumber">Housenumber: {{element.houseNumber}}</p>
+      <p id="pricePerHour">Price per Hour: {{element.pricePerHour}}</p>
+      <p id="description">Description: {{element.description}}</p>
+      <p id="isPublic">Public: {{element.isPublic}}</p>
+      <p id="isWallBox">Wallbox: {{element.isWallBox}}</p>
+      <p id="bookableTimings">Bookable: {{element.bookableTimings}}</p>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>

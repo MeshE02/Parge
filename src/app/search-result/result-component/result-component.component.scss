@@ -1,0 +1,27 @@
+mat-grid-list {
+  background-color: blue;
+}
+
+#list mat-grid-tile {
+  color: white;
+  font-size: 20px;
+  background-color: gray;
+
+}
+
+.block {
+  width: 350px;
+  height: 100%;
+  //background-color: red;
+  position: absolute;
+  left: 0;
+}
+
+.infos {
+
+}
+
+.infos p{
+  float: left;
+  margin: 15px;
+}
