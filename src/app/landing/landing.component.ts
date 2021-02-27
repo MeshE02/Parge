@@ -15,30 +15,17 @@ import { Parkingplace } from '../models/Parkingplace.model';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  parkingPlaces: Parkingplace[];
 
   constructor(
-    private userService: UserService,
-    private db: AngularFirestore,
-    private http: HttpClient,
-    private ppService: ParkingplaceService
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
     this.userService.getUserAttributes().then(
       userobj => {
         console.log(userobj);
-        this.getParkingplaces();
       }
     );
-  }
-
-  getParkingplaces() {
-    this.ppService.getParkingplaces().subscribe(resp => {
-      console.log('fancy stuff');
-      this.parkingPlaces = resp;
-      console.log(this.parkingPlaces);
-    });
   }
 
 }
