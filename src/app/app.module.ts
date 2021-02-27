@@ -6,6 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+import 'here-js-api/scripts/mapsjs-core';
+import 'here-js-api/scripts/mapsjs-service';
+import 'here-js-api/scripts/mapsjs-ui';
+import 'here-js-api/scripts/mapsjs-mapevents';
+import 'here-js-api/scripts/mapsjs-clustering';
 
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ParameterComponentComponent } from './search-result/parameter-component/parameter-component.component';
@@ -26,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { RegisterPPComponent } from './register-pp/register-pp.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { GmapsComponent } from './search-result/gmaps/gmaps.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +47,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ResultComponentComponent,
     RegisterComponent,
     RegisterPPComponent,
+    GmapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +63,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
+    GoogleMapsModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
   ],
