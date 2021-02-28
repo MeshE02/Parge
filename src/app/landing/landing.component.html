@@ -11,13 +11,13 @@
   </div>
   <div class="navigation">
     <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-    <input class="btn" placeholder="Stadt">
+    <input class="btn" placeholder="Wo willst du parken?">
     <a>
-      <mat-form-field class="datepicker" appearance="fill">
+      <mat-form-field class="datepicker date-inputsection" appearance="fill">
         <mat-label class="label_date">Datum</mat-label>
         <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-          <input matStartDate formControlName="start" placeholder="Start date">
-          <input matEndDate formControlName="end" placeholder="End date">
+          <input matStartDate class="date-input" formControlName="start" placeholder="Start date">
+          <input matEndDate formControlName="end" class="date-input" placeholder="End date">
         </mat-date-range-input>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-date-range-picker #picker></mat-date-range-picker>
@@ -28,8 +28,29 @@
 
     </a>
     <a href="#" class="search_btn">Suchen</a>
+
     <a href="https://twitter.com/freshcontrast" target="_blank" class="footer"></a>
   </div>
 </div>
+
+<div class="container">
+<div class="verlauf">
+  <div class="location">Mannheim<br><span id="umgebung">(Umkreis DHBW)</span></div>
+  <p class="park_situation">Freie Parkplätze:</p>
+</div>
+<div class="verlauf">
+  <div class="location">Frankfurt <br><span id="umgebung">(Innenstadt)</span></div>
+  <p class="park_situation">Freie Parkplätze:</p>
+</div>
+<div class="verlauf">
+  <div class="location">Heppenheim <br><span id="umgebung">(Bahnhof)</span></div>
+  <p class="park_situation">Freie Parkplätze:</p>
+</div>
+<div class="verlauf">
+  <div class="location">Stuttgart <br><span id="umgebung">(Kinopolis)</span></div>
+  <p class="park_situation">Freie Parkplätze:</p>
+</div>
+</div>
+
 
 
