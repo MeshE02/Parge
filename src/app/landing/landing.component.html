@@ -15,9 +15,9 @@
     <a>
       <mat-form-field class="datepicker date-inputsection" appearance="fill">
         <mat-label class="label_date">Datum</mat-label>
-        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-          <input matStartDate class="date-input" formControlName="start" placeholder="Start date">
-          <input matEndDate formControlName="end" class="date-input" placeholder="End date">
+        <mat-date-range-input class="date"[formGroup]="range" [rangePicker]="picker">
+          <input matStartDate class="date-input" formControlName="start" placeholder="Zeitraum">
+          <input matEndDate formControlName="end" class="date-input">
         </mat-date-range-input>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-date-range-picker #picker></mat-date-range-picker>

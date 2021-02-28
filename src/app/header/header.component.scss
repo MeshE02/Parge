@@ -13,7 +13,12 @@
   padding-left: -10px;
 }
 
-
+#logo:hover {
+  cursor: pointer;
+  // background:rgba(247, 247, 247, 0.4);
+  padding:5px 5px;
+  color:#1b1b1b;
+}
 .register_btn {
   border: 1px solid white;
   border-radius: 5px;
