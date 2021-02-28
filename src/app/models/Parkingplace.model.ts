@@ -9,6 +9,7 @@ export interface Parkingplace {
   description: string;
   pictureSrc?: string;
   ownerUserId?: string;
+  imageUrl?: string;
   isPublic: boolean;
   isWallBox: boolean;
 

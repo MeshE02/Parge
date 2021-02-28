@@ -74,6 +74,11 @@
       />
       <div class="form-border"></div>
 
+      <div class="course-image-upload">
+        <span>Parkplatzbild: </span>
+        <input type="file" (change)="uploadFile($event)">
+      </div>
+
       <button
         mat-raised-button
         color="primary"

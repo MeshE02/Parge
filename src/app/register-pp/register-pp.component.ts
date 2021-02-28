@@ -3,6 +3,8 @@ import { ParkingplaceService } from './../services/parkingplace.service';
 import { Component, OnInit } from '@angular/core';
 import { Parkingplace } from '../models/Parkingplace.model';
 import { Router } from '@angular/router';
+import { concatMap, last } from 'rxjs/operators';
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-register-pp',
@@ -18,11 +20,13 @@ export class RegisterPPComponent implements OnInit {
   pricePerHour: number;
   description: string;
   userId: string;
+  imageUrl: string;
 
   constructor(
     private ppService: ParkingplaceService,
     private userService: UserService,
     public router: Router,
+    private storage: AngularFireStorage
   ) { }
 
   ngOnInit(): void {
@@ -30,6 +34,20 @@ export class RegisterPPComponent implements OnInit {
       userobj => {
         console.log(userobj);
         this.userId = userobj.documentId;
+      }
+    );
+  }
+
+  uploadFile(event) {
+    const file: File = event.target.files[0];
+    const filePath = `parkingplacesImages/${file.name}`;
+    this.ppService.uploadImage(file, filePath).snapshotChanges().pipe(
+      last(),
+      concatMap(() => this.storage.ref(filePath).getDownloadURL())
+      ).subscribe(
+      resp => {
+        this.imageUrl = resp;
+        console.log(resp);
       }
     );
   }
@@ -45,7 +63,8 @@ export class RegisterPPComponent implements OnInit {
       description: this.description,
       ownerUserId: this.userId,
       isPublic: false,
-      isWallBox: this.isWallbox
+      isWallBox: this.isWallbox,
+      imageUrl: this.imageUrl
     };
     this.ppService.createParkingplace(parkingplaceentry).then((res) => {
       if (res) {
@@ -58,6 +77,7 @@ export class RegisterPPComponent implements OnInit {
         this.description = null;
         this.isWallbox = null;
         this.router.navigateByUrl('');
+        this.imageUrl = null;
       }
     });
   }

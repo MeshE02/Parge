@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { convertSnaps } from './common';
 import { map } from 'rxjs/operators';
 import { Parkingplace } from '../models/Parkingplace.model';
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
 
 
 @Injectable({
@@ -12,7 +13,8 @@ import { Parkingplace } from '../models/Parkingplace.model';
 export class ParkingplaceService {
 
   constructor(
-    private db: AngularFirestore
+    private db: AngularFirestore,
+    private storage: AngularFireStorage
   ) { }
 
   getParkingplaces() {
@@ -35,5 +37,9 @@ export class ParkingplaceService {
         console.log(err);
         return false;
       });
+  }
+
+  uploadImage(file: File, filePath: string) {
+    return this.storage.upload(filePath, file);
   }
 }
