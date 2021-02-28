@@ -17,13 +17,14 @@
               <li>No: {{parkingPlace.houseNumber}}</li>
             </ul>
             <ul>
-              <li> Pricing: {{parkingPlace.pricePerHour}}</li>
+              <li> Pricing: {{parkingPlace.pricePerHour}} €/h</li>
               <li *ngIf="parkingPlace.isPublic">Public Parking Place</li>
               <li *ngIf="!parkingPlace.isPublic">Private Parking Place</li>
               <li *ngIf="parkingPlace.isWallBox">Walbox available!</li>
               <li *ngIf="!parkingPlace.isWallBox">No Walbox available!</li>
             </ul>
             <p class="card_right__details___description">Description: <br> {{parkingPlace.description}}</p>
+            <button class="card_right__details___button"><span>Buchen!</span></button>
             </div>
 
         </div>

@@ -28,7 +28,7 @@
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
-    box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+    box-shadow: 1px 2px 8px rgb(0 0 0 / 65%);
 
     font-family: 'Monserrat', sans-serif !important;
     &_left {
@@ -85,7 +85,28 @@
           font-size: 20px;
           font-weight: bold;
         }
-      }
-    }
+
+        &___button {
+          width: 160px;
+          height: 50px;
+          position: relative;
+          float: right;
+          background: #f3f0f1;
+          margin-right: 100px;
+          border-radius: 32px;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+
+          span {
+            line-height: 30px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 30px;
+            font-weight: semibold;
+          }
+          }
+
+        }
   }
 }
+  }
