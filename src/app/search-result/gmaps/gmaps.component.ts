@@ -18,15 +18,6 @@ export class GmapsComponent implements OnInit {
   @ViewChild("map")
   public mapElement: ElementRef;
 
-  private _apikey: any;
-
-  public lat: any;
-
-  public lng: any;
-
-  public width: any;
-
-  public height: any;
 
   public constructor() { }
 
